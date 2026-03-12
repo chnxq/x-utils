@@ -16,5 +16,4 @@ git tag eventloop/v0.0.1
 git tag aggregator/v0.0.1
 git tag ddl_parser/v0.0.1
 
-
 git push origin --tags
