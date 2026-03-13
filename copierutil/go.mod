@@ -2,10 +2,8 @@ module github.com/chnxq/x-utils/copierutil
 
 go 1.25.0
 
-replace github.com/chnxq/x-utils => ../
-
 require (
-	github.com/chnxq/x-utils v0.0.0
+	github.com/chnxq/x-utils v0.0.0-20260312181448-839355d1c762
 	github.com/jinzhu/copier v0.4.0
 )
 

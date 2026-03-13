@@ -2,10 +2,8 @@ module github.com/chnxq/x-utils/query_parser
 
 go 1.25.0
 
-replace github.com/chnxq/x-utils => ../
-
 require (
-	github.com/chnxq/x-utils v0.0.0
+	github.com/chnxq/x-utils v0.0.0-20260312181448-839355d1c762
 	github.com/go-kratos/kratos/v2 v2.9.2
 	github.com/stretchr/testify v1.11.1
 )
