@@ -3,7 +3,7 @@ module github.com/chnxq/x-utils/copierutil
 go 1.25.0
 
 require (
-	github.com/chnxq/x-utils v0.0.0-20260312181448-839355d1c762
+	github.com/chnxq/x-utils v0.0.0-20260313080845-4124e2213085
 	github.com/jinzhu/copier v0.4.0
 )
 
