@@ -1,6 +1,6 @@
 module github.com/chnxq/x-utils/aggregator
 
-go 1.25.0
+go 1.26.0
 
 require (
 	github.com/graph-gophers/dataloader/v7 v7.1.3

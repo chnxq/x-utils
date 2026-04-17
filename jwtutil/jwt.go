@@ -8,7 +8,7 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/go-kratos/kratos/v2/encoding"
+	"github.com/chnxq/xkitmod/encoding"
 	"github.com/golang-jwt/jwt/v5"
 	"github.com/google/uuid"
 )

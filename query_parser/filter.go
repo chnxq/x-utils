@@ -3,8 +3,8 @@ package query_parser
 import (
 	"strings"
 
-	"github.com/go-kratos/kratos/v2/encoding"
-	_ "github.com/go-kratos/kratos/v2/encoding/json"
+	"github.com/chnxq/xkitmod/encoding"
+	_ "github.com/chnxq/xkitmod/encoding/json"
 
 	"github.com/chnxq/x-utils/stringcase"
 )

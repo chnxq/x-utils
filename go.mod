@@ -1,13 +1,13 @@
 module github.com/chnxq/x-utils
 
-go 1.25.0
+go 1.26.0
 
 require (
 	github.com/gobwas/glob v0.2.3
 	github.com/google/uuid v1.6.0
 	github.com/stretchr/testify v1.11.1
-	golang.org/x/crypto v0.49.0
-	golang.org/x/exp v0.0.0-20260312153236-7ab1446f8b90
+	golang.org/x/crypto v0.50.0
+	golang.org/x/exp v0.0.0-20260410095643-746e56fc9e2f
 	google.golang.org/protobuf v1.36.11
 )
 

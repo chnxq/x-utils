@@ -1,3 +1,3 @@
 module github.com/chnxq/x-utils/eventloop
 
-go 1.25.0
+go 1.26.0
