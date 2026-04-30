@@ -4,6 +4,7 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/assert"
+	"google.golang.org/protobuf/types/descriptorpb"
 )
 
 func TestCopierMapper(t *testing.T) {
@@ -90,4 +91,46 @@ func TestEnumTypeConverter(t *testing.T) {
 	entityInvalid = &tmpEntityThree
 	dtoInvalidResult := converter.ToDTO(entityInvalid)
 	assert.Nil(t, dtoInvalidResult)
+}
+
+func TestCopierMapperConvertsStringEnumToProtoEnumPointer(t *testing.T) {
+	type DtoType struct {
+		Status *descriptorpb.FieldDescriptorProto_Type
+	}
+
+	type EntityStatus string
+
+	type EntityType struct {
+		Status *EntityStatus
+	}
+
+	mapper := NewCopierMapper[DtoType, EntityType]()
+
+	status := EntityStatus("TYPE_INT32")
+	dto := mapper.ToDTO(&EntityType{Status: &status})
+
+	assert.NotNil(t, dto)
+	assert.NotNil(t, dto.Status)
+	assert.Equal(t, descriptorpb.FieldDescriptorProto_TYPE_INT32, *dto.Status)
+}
+
+func TestCopierMapperConvertsProtoEnumPointerToStringEnum(t *testing.T) {
+	type DtoType struct {
+		Status *descriptorpb.FieldDescriptorProto_Type
+	}
+
+	type EntityStatus string
+
+	type EntityType struct {
+		Status *EntityStatus
+	}
+
+	mapper := NewCopierMapper[DtoType, EntityType]()
+
+	status := descriptorpb.FieldDescriptorProto_TYPE_INT32
+	entity := mapper.ToEntity(&DtoType{Status: &status})
+
+	assert.NotNil(t, entity)
+	assert.NotNil(t, entity.Status)
+	assert.Equal(t, EntityStatus("TYPE_INT32"), *entity.Status)
 }
