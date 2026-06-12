@@ -55,8 +55,8 @@ func (g *Client) Query(rawIP string) (ret geoip.Result, err error) {
 
 	isPrivate := IsPrivateIP(ip)
 	if isPrivate {
-		ret.Country = "局域网"
-		ret.Province = "局域网"
+		//ret.Country = "局域网"
+		//ret.Province = "局域网"
 		ret.City = "局域网"
 		return ret, nil
 	}
